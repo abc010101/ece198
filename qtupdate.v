@@ -285,3 +285,12 @@ def learnCosts(fsourceID, fbatteryStat, fValue, fclusterID, _routingTable):
 	return reinit
 
 ********************************/
+
+
+/**
+
+	TODO:
+	- Implement if found then found.sinkID[] <= knownSinks[]
+	  - WHY THO?
+
+ */
