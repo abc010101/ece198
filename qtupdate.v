@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-`define NID_BASEADDR
+//`define NID_BASEADDR
 
 module qtupdate(clk, nrst, start, nID, battStat, qVal, cID, sinkID, wr, data, addr);
 	
