@@ -1,0 +1,103 @@
+/*===================================
+=            DEFINITIONS            =
+===================================*/
+
+CLIQUE Processes:
+	1. getNextHop
+		- solve for nextHop using CLIQUE
+	2. tableUpdate
+		- update table info
+	3. infoUpdate
+		- update info
+
+Q-Table
+	- contains
+		neighbors[]
+			nID
+			cID
+			qVal
+			battStat
+			sinkID
+
+Routing Table:
+	- in the Routing layer
+	- concerned with inter-cluster routing
+
+
+this.node refers to the node in subject
+
+Next hop neighbor
+	- Every neighbor that can send a packet to this.node
+	- Populated in neighbors[]
+
+DATA packets:
+	- packets containing observed data
+	- contains feedback info
+
+DATA_REQ packets:
+	- packets broadcasted by the sinks
+	- propagated in the network
+
+Clustering:
+	- assigned
+	- grid-based
+
+Intra-cluster routing:
+	- Handled by CLIQUE
+
+Inter-cluster routing:
+	- Handled by routing layer
+	- Only applies to aggregated DATA packets and DATA packets sent by CH 
+
+Feedback info
+	- only in DATA packets
+	- includes nID, cID, sinkID, qVal, battStat
+
+
+
+
+
+
+/*===================================
+=            CONVENTIONS            =
+===================================*/
+
+Frequency of Data Gathering and Data Transmission
+	- can be set
+	- set to 2s by default
+	- duration set to 1s by default
+
+Node ID (nID):
+	- starting with 1
+	- 0 is used as destNode at startup when there are no neighbors yet
+
+
+/*=================================
+=            OPERATION            =
+=================================*/
+
+
+START
+
+GET INTERNAL FLAGS AND PARTIAL QTABLE FROM ROM
+
+IF SINK ===> AGGREGATE MODE, STORE RECEIVED DATA TO ROM, DISABLE CLIQUE MODULE
+	SINK START
+	Broadcast DATA_REQ Packets
+		DATA_REQ Packets handled by routing layer
+			updated with cumulative routing info every time it passes through a node
+			stored in ROUTING TABLE
+			discarded if already passed through node
+
+		ROUTING TABLE updated with node to sink[] cost
+			cost is defined as the sum of radio power of each hop
+
+
+START RX, RAMP RX POWER (ASSUMING NO POWER/RX/TX CONTROL UNIT) UNTIL NEIGHBOR==MIN_NEIGHBORS
+	Initial (Neighbor <= MIN_NEIGHBOR)
+	Process all
+
+GATHER DATA AND TX EVERY (FREQ=/5sec)
+	INITIAL
+	destNode = 0
+
