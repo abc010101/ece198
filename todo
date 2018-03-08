@@ -1,0 +1,93 @@
+1. Complete Module
+2. Synthesis
+
+ONE PAGE SUMMARY
+SUMMARY OF ACCOMPLISHMENTS
+Definitions, Conventions
+Proof of Concept
+EACH BLOCK, brief discussion
+Integration and Synthesis
+
+HALFWAY DOCUMENTATION:
+//Update Title
+//FOCUS NA SA CLUSTERING AND Q-LEARNING
+//Update Problem Statement and Objectives, focus on the context of Microlab/Rese2nse
+
+RRL
++  
+
+//INCLUDE OMNET++ Basic parts to work: NED, ini, CC, Data Analysis
+
+METHODOLOGY
+A. Conventions
+	//Conventions: FP data, Memory width, Network size, neighbor limit
+	//Definitions?
+B. Preliminary Work
+	*** Dapat ba sa methodology yung pagexplore sa CLIQUEv1 code? 
+	Preliminary Simulation (OMNET++)
+		Functionality, Operation Basics
+		CLIQUE v1 Codebase?
+			FF3
+			Dependencies
+		CLIQUE v2? Modifications to Forster operation
+C. Proof of Concept
+	Proof of Concept
+		CLIQUE Network (Software) operation validation
+		Hardware functionality verification/simplification ()
+		Fixed point convention checking/validation??
+D. ML HW Design
+	Hardware
+		//Discuss each block and module used in the block, Functionality then modelling (1 section per block)
+		//Discuss optimizations done: one add/mult for all states, etc.
+D1. Memory
+		Memory
+			Discuss memory format and allocation, controller
+D2. Fixed Point operations
+		
+D3. Cost evaluation
+		Cost evaluation
+			Make flowchart, block diagram , state diagram(?)
+			Discuss operations
+D4. Q-Table Update
+		QTable Update
+			Make flowchart, block diagram, state diagram (?)
+D5. Winner Policy
+
+D6. Reward
+
+		//Integration
+		//Synthesis
+
+**UPDATE ML HW ENERGY MEASUREMENTS
+**UPDATE WSN SIMULATION
+**EVALUATION AND COMPARISON?
+
+RESULTS AND DISCUSSION
+	Proof of Concept
+
+
+
+
+Todo:
+1. Rename blocks
+	Cost evaluation -->
+	Qtable update -->
+	Winner Policy -->
+	Reward -->
+	Memory -->
+2. Update chapter 5
+3. Block diagrams for each block
+4. Scope ng memory? ROUTING TABLE or QTABLE?
+	External access ---> Routing(Inter cluster)
+5. Settle sa naming: CLIQUE v2? ML? ...
+6. Read through 190 paper, pinpoint needed changes
+7. Handle limit on memory ??? OVERFLOW
+8. Make updated block diagram accdg to flowchart
+	add storage of last feedback info
+	throw unnecessary feedback info, optimize
+	revise test.py
+
+Check http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=7280978
+network modelling, expand RRL
+
+
