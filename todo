@@ -62,11 +62,14 @@ D4. Q-Table Update
 		QTable Update
 			Make flowchart, block diagram, state diagram (?)
 D5. Winner Policy
-
+		discuss submodules, epsilon greedy operations
 D6. Reward
+		
+E. Integration
 
-		//Integration
-		//Synthesis
+F. Synthesis
+	
+
 
 **UPDATE ML HW ENERGY MEASUREMENTS
 **UPDATE WSN SIMULATION
@@ -76,6 +79,28 @@ RESULTS AND DISCUSSION
 	Proof of Concept
 
 
+
+OUTLINE:
+4 Methodology
+	4.1 Conventions (Rename)
+	4.2 Preliminary Work (Rename)
+	4.3 Proof of Concept
+		4.3.1 
+	4.4 ML Hardware Design
+		4.4.1 Memory
+		4.4.2 FP Operations (? Since di na siya sariling block baka pwedeng tanggalin)
+		4.4.3 Cost Evaluation
+		4.4.4 Q-Table Update
+		4.4.5 Winner Policy
+		4.4.6 Reward
+		4.4.7 Integration
+		4.4.8 Synthesis
+	4.5 ML Hardware Energy Measurements
+	4.6 WSN Simulation
+		4.6.1 Trad Clustering vs ML-based Clustering
+		4.6.2 Simulation Environment
+	4.7 Evaluation and Comparison
+5 Results and Discussion
 
 
 Todo:
