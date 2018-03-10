@@ -102,6 +102,10 @@ OUTLINE:
 	4.7 Evaluation and Comparison
 5 Results and Discussion
 
+BUGS
+1. neighborSinkInOtherCluster: Dead sink in QTable? Data trashed.
+2. Handle overflow
+
 
 Todo:
 1. Rename blocks
@@ -116,8 +120,7 @@ Todo:
 	External access ---> Routing(Inter cluster)
 5. Settle sa naming: CLIQUE v2? ML? ...
 6. Read through 190 paper, pinpoint needed changes
-7. Handle limit on memory ??? OVERFLOW
-8. Make updated block diagram accdg to flowchart
+7. Make updated block diagram accdg to flowchart
 	add storage of last feedback info
 	throw unnecessary feedback info, optimize
 	revise test.py
